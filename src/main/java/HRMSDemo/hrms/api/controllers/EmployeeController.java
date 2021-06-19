@@ -21,11 +21,11 @@ public class EmployeeController {
 
     private EmployeeService employeeService;
 
-    @Autowired
-    public EmployeeController(EmployeeService employeeService) {
-        super();
-        this.employeeService = employeeService;
-    }
+    // @Autowired
+//    public EmployeeController(EmployeeService employeeService) {
+//        super();
+//        this.employeeService = employeeService;
+//    }
     @PostMapping("/add")
     public Result add(@RequestBody Employee employee){
         return this.employeeService.add(employee);
