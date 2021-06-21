@@ -1,6 +1,7 @@
 package HRMSDemo.hrms.entities.concretes;
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import java.util.List;
 @Table(name = "job_category")
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "jobs", "hibernateLazyInitializer", "handler", "employees"})
 public class JobCategory {
 	
 	@Id
@@ -22,8 +24,9 @@ public class JobCategory {
 	@Column(name = "category_name")
 	private String categoryName;
 
-//	@OneToMany(mappedBy = "job_category")
-//	private List<Employee> employees;
-//	@OneToMany(mappedBy = "job_category")
-//	private List<Jobs> jobs;
+
+	@OneToMany(mappedBy = "jobCategory")
+	private List<Employee> employees;
+	@OneToMany(mappedBy = "jobCategory")
+	private List<Jobs> jobs;
 }

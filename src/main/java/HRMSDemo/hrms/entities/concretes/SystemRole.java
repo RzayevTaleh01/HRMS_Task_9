@@ -1,5 +1,6 @@
 package HRMSDemo.hrms.entities.concretes;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","systemPersonals"})
 @Table(name = "system_role")
 public class SystemRole {
     @Id
@@ -20,8 +22,8 @@ public class SystemRole {
 
     @Column(name = "role_name")
     private String roleName;
-//
-//    @OneToMany(mappedBy = "system_personal")
-//    private List<SystemPersonal> systemPersonals;
+
+    @OneToMany(mappedBy = "systemRole")
+    private List<SystemPersonal> systemPersonals;
 
 }

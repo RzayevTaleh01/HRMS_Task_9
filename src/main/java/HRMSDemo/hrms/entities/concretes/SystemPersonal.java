@@ -30,7 +30,7 @@ public class SystemPersonal {
     @Column(name = "password")
     private String password;
 
-//    @ManyToOne
-//    @JoinColumn(name = "system_role")
-//    private SystemRole systemRole;
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private SystemRole systemRole;
 }

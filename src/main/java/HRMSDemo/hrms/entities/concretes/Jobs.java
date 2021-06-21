@@ -35,13 +35,13 @@ public class Jobs {
 
     @Column(name = "is_active")
     private boolean isActive;
-//
-//    @ManyToOne()
-//    @JoinColumn(name = "job_category")
-//    private JobCategory jobCategory;
-//
-//    @ManyToOne()
-//    @JoinColumn(name = "cities")
-//    private Cities cities;
+
+    @ManyToOne()
+    @JoinColumn(name = "job_cat_id")
+    private JobCategory jobCategory;
+
+    @ManyToOne()
+    @JoinColumn(name = "job_city_id")
+    private Cities cities;
 
 }
