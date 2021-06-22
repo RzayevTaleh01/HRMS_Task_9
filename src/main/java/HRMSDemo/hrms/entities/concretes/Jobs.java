@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -32,6 +33,10 @@ public class Jobs {
 
     @Column(name = "date_end")
     private String dateEnd;
+    @Column(name = "created_date")
+    private LocalDateTime createdDate = LocalDateTime.now();
+    @Column(name = "vacancy_num")
+    private int vacancyNum;
 
     @Column(name = "is_active")
     private boolean isActive;
@@ -43,5 +48,9 @@ public class Jobs {
     @ManyToOne()
     @JoinColumn(name = "job_city_id")
     private Cities cities;
+
+    @ManyToOne()
+    @JoinColumn(name = "employer_id")
+    private  Employer employer;
 
 }

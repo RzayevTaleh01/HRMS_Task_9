@@ -30,8 +30,5 @@ public class Employee {
     @Column(name = "password")
     private String password;
 
-    @ManyToOne()
-    @JoinColumn(name = "job_cat_id")
-    private JobCategory jobCategory;
 
 }
