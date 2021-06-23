@@ -1,4 +1,4 @@
-package HRMSDemo.hrms.business.validations;
+package HRMSDemo.hrms.core.validations;
 
 import HRMSDemo.hrms.business.abstracts.EmployeeValidatorService;
 import HRMSDemo.hrms.core.RegexEmailChecker;

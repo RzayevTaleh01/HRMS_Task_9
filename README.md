@@ -1,40 +1,16 @@
-# HRMS_Task7_3
-Engin Demirog Java+React Kamp Task 7.3
+# HRMS_Task8_1
+Engin Demirog Java+React Kamp Task 8.1
 
-# Task
+# Hal-hazırda sistemdə olan əməliyyyatlar
+1. Sistemə İş Elanlarını Əlavə Etmək Silmək Yeniləmək Mümkündür
+2. Sistemdəki aktiv iş elanlarını əlavə olunma tarixinə görə listələnməsi
+3. Sistemdə olan bütün aktiv iş elanları listələnməsi
+4. Sistemdə 1 Firmaya(company) aid bütün aktiv iş elanlarını listələnməsi
+5. Sistemdə 1 Kategoriyada olan İş Elanlarının listələnməsi
+6. Elan sahibi istədiyi anda elanı passiv(deaktiv) edə bilir
+7. Elanın adını daxil etməklə onun haqqında bütün məlumatların çağırılması
+8. Elanın adının müəyyən hissəsini yazmaqla elanın çağırılması (Contain Əməliyyatı)
+9. Elanın adının ilk hissəsini yazmaqla elanın çağırılması (Starting With əməliyyatı)
+10. Elan adı və elanın aktiv/passiv'liyini daxil etməklə elanın çağırılması
 
-ÖNEMLİ 1 : Doğrulama işlemleri için sahte servisler oluşturunuz. Örneğin, gerçekten mail göndermeniz gerekmez.
-
-ÖNEMLİ 2 : Gereksinimler dışında kodlama yapmayınız. Bu, Proje yönetimi ve ALM (Application LifeCycle Management) kurallarına aykırı bir yazılım geliştirici davranışıdır.
-
-
-
-Req 1 : İş Arayanlar sisteme kayıt olabilmelidir.
-
-Kabul Kriterleri:
-
-Kayıt sırasında kullanıcıdan ad, soyad, tcno, doğum yılı, e-Posta, şifre, şifre tekrarı bilgileri istenir.
-Tüm alanlar zorunludur. Kullanıcı bilgilendirilir.
-Mernis doğrulaması yapılarak sisteme kayıt gerçekleştirilir.
-Doğrulama geçerli değilse kullanıcı bilgilendirilir.
-Daha önce kayıtlı bir e-posta veya tcno var ise kayıt gerçekleşmez. Kullanıcı bilgilendirilir.
-Kayıdın gerçekleşmesi için e-posta doğrulaması gerekir.
-Req 2 : İş verenler sisteme kayıt olabilmelidir.
-
-Kabul Kriterleri:
-
-Kayıt sırasında kullanıcıdan şirket adı, web sitesi, web sitesi ile aynı domaine sahip e-posta, telefon, şifre, şifre tekrarı bilgileri istenir. Burada amaç sisteme şirket olmayanların katılmasını engellemektir.
-Tüm alanlar zorunludur. Kullanıcı bilgilendirilir.
-Şirket kayıtları iki şekilde doğrulanır. Kayıdın gerçekleşmesi için e-posta doğrulaması gerekir. HRMS personelinin (bizim :)) onayı gerekmektedir.
-Daha önce kayıtlı bir e-posta var ise kayıt gerçekleşmez. Kullanıcı bilgilendirilir.
-Req 3 : Sisteme genel iş pozisyonu isimleri eklenebilmelidir. Örneğin Software Developer, Software Architect.
-
-Kabul Kriterleri:
-
-Bu pozisyonlar tekrar edemez. Kullanıcı uyarılır.
-Req 4 : İş verenler listelenebilmelidir. (Sadece tüm liste)
-
-Req 5 : İş arayanlar listelenebilmelidir. (Sadece tüm liste)
-
-Req 6 : İş pozisyonları listelenebilmelidir. (Sadece tüm liste)
 

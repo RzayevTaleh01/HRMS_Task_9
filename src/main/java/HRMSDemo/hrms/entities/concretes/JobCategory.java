@@ -19,7 +19,7 @@ public class JobCategory {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private int id;
+	private int jobCategoryId;
 
 	@Column(name = "category_name")
 	private String categoryName;
