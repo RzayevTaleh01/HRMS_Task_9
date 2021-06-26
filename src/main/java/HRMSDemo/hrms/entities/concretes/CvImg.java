@@ -1,5 +1,6 @@
 package HRMSDemo.hrms.entities.concretes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,9 +23,10 @@ public class CvImg {
     private String imgUrl;
 
     @Column(name = "uploaded_date")
-    private LocalDate uploadedDate;
+    private LocalDate uploadedDate = LocalDate.now();
 
-    @ManyToOne()
-    @JoinColumn(name = "employee_id")
+    @JsonIgnore
+    @OneToOne()
+    @JoinColumn(name="employee_id",referencedColumnName = "id")
     private Employee employee;
 }

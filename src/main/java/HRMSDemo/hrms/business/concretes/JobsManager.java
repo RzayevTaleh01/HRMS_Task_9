@@ -27,6 +27,14 @@ public DataResult<List<Jobs>> getAll() {
             this.jobsDao.findAll(),"Data Listelendi"
     );
 }
+    @Override
+    public Result add(Jobs jobs) {
+        if (!CheckField(jobs)) {
+            return new ErrorResult("You have entered missing information. Please fill in all fields.");  //Eksik bilgi girdiniz. lütfen bütün boşlukları doldurun
+        }
+        this.jobsDao.save(jobs);
+        return new SuccessResult("Urun Eklendi");
+    }
 
     @Override
     public Result update(Jobs jobs) {
@@ -48,16 +56,6 @@ public DataResult<List<Jobs>> getAll() {
     public DataResult<List<Jobs>> getByEmployer_EmployerId(int id) {
         return new SuccessDataResult<List<Jobs>>
                 (this.jobsDao.getByEmployer_EmployerId(id));
-    }
-
-
-    @Override
-    public Result add(Jobs jobs) {
-        if (!CheckField(jobs)) {
-            return new ErrorResult("You have entered missing information. Please fill in all fields.");  //Eksik bilgi girdiniz. lütfen bütün boşlukları doldurun
-        }
-        this.jobsDao.save(jobs);
-        return new SuccessResult("Urun Eklendi");
     }
 
     @Override

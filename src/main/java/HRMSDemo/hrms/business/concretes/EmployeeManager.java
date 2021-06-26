@@ -8,6 +8,7 @@ import HRMSDemo.hrms.core.utilities.results.SuccessResult;
 import HRMSDemo.hrms.dataAccess.abstracts.EmployeeDao;
 import HRMSDemo.hrms.entities.concretes.Employee;
 import HRMSDemo.hrms.entities.concretes.Employer;
+import HRMSDemo.hrms.entities.concretes.Jobs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,13 @@ public class EmployeeManager implements EmployeeService {
         return new SuccessDataResult<List<Employee>>
                 (this.employeeDao.findAll(),"Data Listelendi");
     }
+
+    @Override
+    public DataResult<Employee> getById(int id) {
+        return new SuccessDataResult<Employee>(
+                this.employeeDao.getById(id),"Data Listelendi");
+    }
+
 
     @Override
     public Result add(Employee employee) {

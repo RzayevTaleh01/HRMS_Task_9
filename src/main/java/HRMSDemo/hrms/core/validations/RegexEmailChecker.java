@@ -1,4 +1,4 @@
-package HRMSDemo.hrms.core;
+package HRMSDemo.hrms.core.validations;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

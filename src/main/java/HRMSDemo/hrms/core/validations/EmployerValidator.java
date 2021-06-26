@@ -1,7 +1,6 @@
 package HRMSDemo.hrms.core.validations;
 
 import HRMSDemo.hrms.business.abstracts.EmployerValidatorService;
-import HRMSDemo.hrms.core.RegexEmailChecker;
 import HRMSDemo.hrms.core.utilities.results.ErrorResult;
 import HRMSDemo.hrms.core.utilities.results.Result;
 import HRMSDemo.hrms.core.utilities.results.SuccessResult;
