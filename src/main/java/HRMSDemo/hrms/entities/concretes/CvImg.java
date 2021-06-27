@@ -1,14 +1,14 @@
 package HRMSDemo.hrms.entities.concretes;
 
+import HRMSDemo.hrms.entities.concretes.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
-@Data
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "cv_img")
@@ -19,12 +19,13 @@ public class CvImg {
     private int cvImgId;
 
     @Column(name = "img_link")
-    private String imgUrl;
+    private String imgLink;
 
     @Column(name = "uploaded_date")
-    private LocalDate uploadedDate = LocalDate.now();
+    private String uploadedDate;
 
     @ManyToOne()
     @JoinColumn(name = "employee_id")
     private Employee employee;
+
 }

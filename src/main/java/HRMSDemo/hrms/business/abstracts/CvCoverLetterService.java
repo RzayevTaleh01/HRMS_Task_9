@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface CvCoverLetterService {
     DataResult<List<CvCoverLetter>> getAll();
+    DataResult<CvCoverLetter> getByEmployee_id(int employeeId);
     Result add(CvCoverLetter cvCoverLetter);
 }

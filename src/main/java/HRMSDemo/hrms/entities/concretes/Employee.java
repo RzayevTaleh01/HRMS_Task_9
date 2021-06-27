@@ -20,7 +20,8 @@ import java.util.List;
         "hibernateLazyInitializer","handler","cvLinks",
         "hibernateLazyInitializer","handler","cvLanguages",
         "hibernateLazyInitializer","handler","cvCoverLetters",
-        "hibernateLazyInitializer","handler","cvExperiences"
+        "hibernateLazyInitializer","handler","cvExperiences",
+        "hibernateLazyInitializer","handler","cvImgs"
 })
 public class Employee {
     @Id
@@ -57,5 +58,8 @@ public class Employee {
 
     @OneToMany(mappedBy = "employee")
     private List<CvExperience> cvExperiences;
+
+    @OneToMany(mappedBy = "employee")
+    private List<CvImg> cvImgs;
 
 }

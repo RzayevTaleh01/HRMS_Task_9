@@ -28,6 +28,11 @@ public class CvLinksManager implements CvLinksService {
     }
 
     @Override
+    public DataResult<CvLinks> getByEmployee_Id(int employeeId) {
+        return new SuccessDataResult<>(cvLinksDao.getByEmployee_Id(employeeId));
+    }
+
+    @Override
     public Result add(CvLinks cvLinks) {
         this.cvLinksDao.save(cvLinks);
         return new SuccessResult("Data Elave Olundu");

@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name = "languages")
 @JsonIgnoreProperties({
-        "hibernateLazyInitializer","handler","languages"
+        "hibernateLazyInitializer","handler","cvLanguages"
 })
 public class Languages {
     @Id

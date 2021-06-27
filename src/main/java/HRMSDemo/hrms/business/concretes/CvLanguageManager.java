@@ -7,6 +7,7 @@ import HRMSDemo.hrms.core.utilities.results.SuccessDataResult;
 import HRMSDemo.hrms.core.utilities.results.SuccessResult;
 import HRMSDemo.hrms.dataAccess.abstracts.CvLanguageDao;
 import HRMSDemo.hrms.entities.concretes.CvLanguage;
+import HRMSDemo.hrms.entities.concretes.CvLinks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,11 @@ public class CvLanguageManager implements CvLanguageService {
     public CvLanguageManager(CvLanguageDao cvLanguageDao) {
         super();
         this.cvLanguageDao = cvLanguageDao;
+    }
+
+    @Override
+    public DataResult<List<CvLanguage>> getByEmployee_Id(int employeeId) {
+        return new SuccessDataResult<List<CvLanguage>>(cvLanguageDao.getByEmployee_Id(employeeId));
     }
 
     @Override

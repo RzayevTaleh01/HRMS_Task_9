@@ -7,6 +7,7 @@ import HRMSDemo.hrms.entities.concretes.CvExperience;
 import java.util.List;
 
 public interface CvExperienceService {
+    DataResult<List<CvExperience>> getByEmployee_id(int employeeId);
     DataResult<List<CvExperience>> getAll();
     Result add(CvExperience cvExperience);
 }

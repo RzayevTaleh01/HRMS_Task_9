@@ -9,4 +9,6 @@ import java.util.List;
 public interface CvLanguageService {
     DataResult<List<CvLanguage>> getAll();
     Result add(CvLanguage cvLanguage);
+    DataResult<List<CvLanguage>> getByEmployee_Id(int employeeId);
+
 }

@@ -24,6 +24,12 @@ public class CvExperienceManager implements CvExperienceService {
     }
 
     @Override
+    public DataResult<List<CvExperience>> getByEmployee_id(int employeeId) {
+        return new SuccessDataResult<List<CvExperience>>
+                (this.cvExperienceDao.getByEmployee_id(employeeId));
+    }
+
+    @Override
     public DataResult<List<CvExperience>> getAll() {
         return new SuccessDataResult<List<CvExperience>>
                 (this.cvExperienceDao.findAll(),"Data Listelendi");

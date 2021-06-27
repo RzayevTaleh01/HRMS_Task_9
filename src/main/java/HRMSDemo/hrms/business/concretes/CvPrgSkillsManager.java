@@ -24,6 +24,11 @@ public class CvPrgSkillsManager implements CvPrgSkillsService {
     }
 
     @Override
+    public DataResult<List<CvPrgSkills>> getByEmployee_Id(int employeeId) {
+        return new SuccessDataResult<List<CvPrgSkills>>(cvPrgSkillsDao.getByEmployee_Id(employeeId));
+    }
+
+    @Override
     public DataResult<List<CvPrgSkills>> getAll() {
         return new SuccessDataResult<List<CvPrgSkills>>
                 (this.cvPrgSkillsDao.findAll(),"Data Listelendi");

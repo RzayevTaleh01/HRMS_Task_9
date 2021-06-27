@@ -8,5 +8,7 @@ import java.util.List;
 
 public interface CvLinksService {
     DataResult<List<CvLinks>> getAll();
+    DataResult<CvLinks> getByEmployee_Id(int employeeId);
+
     Result add(CvLinks cvLinks);
 }

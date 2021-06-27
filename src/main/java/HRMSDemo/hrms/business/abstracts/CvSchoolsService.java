@@ -9,4 +9,5 @@ import java.util.List;
 public interface CvSchoolsService {
     DataResult<List<CvSchools>> getAll();
     Result add(CvSchools cvSchools);
+    DataResult<List<CvSchools>> getByEmployee_Id(int employeeId);
 }

@@ -29,6 +29,12 @@ public class CvCoverLetterManager implements CvCoverLetterService {
     }
 
     @Override
+    public DataResult<CvCoverLetter> getByEmployee_id(int employeeId) {
+        return new SuccessDataResult<CvCoverLetter>
+                (this.cvCoverLetterDao.getByEmployee_id(employeeId));
+    }
+
+    @Override
     public Result add(CvCoverLetter cvCoverLetter) {
         this.cvCoverLetterDao.save(cvCoverLetter);
         return new SuccessResult("Data elave olundu");
