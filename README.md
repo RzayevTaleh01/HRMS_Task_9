@@ -23,9 +23,16 @@ Engin Demirog Java+React Kamp Task 9.1 9.2
 
 **Req 13:**  _Bir adaya ait tüm CV bilgisi görüntülenebilmelidir._
 
+![image](https://user-images.githubusercontent.com/70813725/123541253-99a6c400-d754-11eb-925b-b42a1e9b6e1c.png)
+
+
 # Bu taskda olan Controller'lər
 
 ![image](https://user-images.githubusercontent.com/70813725/123518349-87764880-d6b6-11eb-8ea5-ddf81a0e871b.png)
+
+**Yeniləndi**
+
+![image](https://user-images.githubusercontent.com/70813725/123541202-4af92a00-d754-11eb-9646-e32ccbbe96ab.png)
 
 
 # Screen Shorts(Cloudinary Service)
